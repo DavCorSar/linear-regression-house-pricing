@@ -2,7 +2,7 @@
 Python script for a linear regression to predict house prices
 
 ## How to use
-Download all the files and execute the shell script execut.sh. This will automatically check the building process of the docker, then it will be tested running the python script and finally it will push the Docker image into a public repository in http://dockerhub.com.
+Download all the files and execute the shell script execut.sh. This will automatically check the building process of the docker, then it will test the python script by running it and finally it will push the Docker image into a public repository in http://dockerhub.com.
 
 After that you will be able to run the script for training and testing the Linear Regression model with the load_boston dataset, available at: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html. The arguments to pass to the script are the followings:
 
