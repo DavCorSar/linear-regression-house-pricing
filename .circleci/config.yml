@@ -21,8 +21,11 @@ jobs:
     # The executor is the environment in which the steps below will be executed - below will use a python 3.10.2 container
     # Change the version below to your required version of python
     docker:
-      - image: ubuntu # jupyter/scipy-notebook
+      - image: ubuntu
     steps:
+      - run:
+          name: Install docker
+          command: apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
       - run:
           name: Run construction
           command: docker build -t davcorsar/linear-regression-house-pricing:latest .
