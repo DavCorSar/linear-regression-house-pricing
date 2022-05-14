@@ -11,8 +11,11 @@ jobs:
       - image: ubuntu
     steps:
       - run:
+         name: Install docker
+         command: apt-get update && apt-ger install docker.io
+      - run:
           name: Run construction
-          uses: docker/login-action@v1
+          # uses: docker/login-action@v1
           command: docker build -t davcorsar/linear-regression-house-pricing:latest .
       - run:
           name: Run test
