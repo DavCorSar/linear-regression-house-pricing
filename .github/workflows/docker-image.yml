@@ -18,6 +18,8 @@ jobs:
       run: docker build -t davcorsar/linear-regression-house-pricing:latest .
     - name: Run the Docker image
       run: docker run davcorsar/linear-regression-house-pricing
+    - name: Commit the Docker image
+      run: docker commit $(docker container ps -l -q) davcorsar/linear-regression-house-pricing:latest
     - name: Run the Docker image 2
       run: docker run davcorsar/linear-regression-house-pricing --mode=predict
     - name: Login to DockerHub
