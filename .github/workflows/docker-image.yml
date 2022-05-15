@@ -19,7 +19,7 @@ jobs:
     - name: Run the Docker image
       run: docker run davcorsar/linear-regression-house-pricing
     - name: Login to DockerHub
-      run: docker login -u "davcorsar" -p "password" docker.io
+      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }} docker.io
     - name: Push the Docker image
       run: docker push davcorsar/linear-regression-house-pricing:latest
 
