@@ -22,4 +22,6 @@ After that you will be able to run the script for training and testing the Linea
 
 To execute the script run:
 
-sudo docker run -t davcorsar/linear-regression-house-pricing [arguments]
+sudo docker run -t davcorsar/linear-regression-house-pricing [arguments]  
+
+Make sure when you build a new image, first you need to execute the training process and then do a commit to make sure that you saved the model. To make sure that you executed the whole process, you can execute the bash script named execution.sh, where the new image is built, then it runs the training process. After that the bash script does a commit to save the model. Finally the new image with the saved model is pushed into the DockerHub repository.
